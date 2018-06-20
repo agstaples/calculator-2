@@ -19,6 +19,10 @@ def calculate():
     
     while True:
         user_command = input(">")
+        # allowing to quit out of calculator
+        if user_command == "q" or user_command == "quit":
+            print("Good bye.")
+            break
         # tokenizing user input
         command_list = user_command.split(" ")
         operator = command_list[0].lower()
@@ -30,10 +34,6 @@ def calculate():
             # num3 = float(command_list[3])
             print("We are going to use your first 2 lovely numbers.")
 
-        # allowing to quit out of calculator
-        if user_command == "q" or user_command == "quit":
-            print("Good bye.")
-            break
         # calling functions in aritmetic.py
         if operator == "+":
             print(add(num1, num2))
